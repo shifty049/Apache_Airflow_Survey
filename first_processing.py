@@ -6,12 +6,13 @@ import google.auth
 from datetime import datetime, timedelta
 from google.cloud import bigquery
 from airflow.models import DAG
-from airflow.operators.sqlite_operator import SqliteOperator
-from airflow.operators.python_operator import PythonOperator, BranchPythonOperator
-from airflow.operators.slack_operator import SlackAPIPostOperator
-from airflow.operators.dummy_operator import DummyOperator
-from airflow.contrib.sensors.file_sensor import FileSensor
-from airflow.operators.bash_operator import BashOperator
+from airflow.providers.sqlite.operators.sqlite import SqliteOperator
+from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator, BranchPythonOperator
+from airflow.providers.slack.operators.slack import SlackAPIPostOperator
+from airflow.operators.dummy import DummyOperator
+from airflow.sensors.filesystem import FileSensor
+from datetime import datetime, timedelta
 
 dag_id = 'first_airflow_job'
 # default for whole DAG

@@ -39,7 +39,7 @@
 ## requirements
 
 1.python 3.7
-2.apache-airflow 1.10.15
+2.apache-airflow==2.1.0
 
 
 ## cmd

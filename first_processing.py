@@ -187,4 +187,3 @@ with DAG(dag_id = dag_id, default_args = default_args) as dag:
 send_slack_startng_message >> create_table >> get_raw_bigquery_data >> [save_df_as_csv, do_nothing]
     
 save_df_as_csv >> check_csv_exist >> store_data >> send_slack_ending_message
-      

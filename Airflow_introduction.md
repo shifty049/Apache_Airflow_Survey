@@ -45,4 +45,4 @@
 ## cmd
 
 1. **`launch webserver:` nohup airflow webserver -p 8080 &> ~/airflow_server_log.txt &**
-2. **`launch schedule:` nohup airflow scheduler &> ~/airflow_schedule_log.txt &**
+2. **`launch scheduler:` nohup airflow scheduler &> ~/airflow_schedule_log.txt &**
